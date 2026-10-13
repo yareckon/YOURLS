@@ -596,7 +596,7 @@ RETURN;
  * @param int    $row_id      Numeric value used to form row IDs, defaults to one
  * @return string             HTML of the row
  */
-function yourls_table_add_row( string $keyword, string $url, string $title, string $ip, int|string $clicks, string $timestamp, int $row_id = 1 ):string {
+function yourls_table_add_row( string $keyword, string $url, string $title, string $ip, int|string $clicks, string $timestamp, ?int $row_id = 1 ):string {
     $keyword  = yourls_sanitize_keyword($keyword);
     $id       = yourls_unique_element_id('yid', $row_id);
     $shorturl = yourls_link( $keyword );
